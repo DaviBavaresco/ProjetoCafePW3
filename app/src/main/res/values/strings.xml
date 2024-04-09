@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Coffe House</string>
+    <string name="TelaCadastraBoasVindas">Cadastre seu Cafe</string>
+    <string name="TelaCadastraNomeCafe">Nome do Cafe</string>
+    <string name="TelaCadastraDescricao">Descricao do Cafe</string>
+    <string name="TelaCadastraValor">Valor do Cafe</string>
+    <string name="TelaCadastraSalvar">Salvar</string>
+
+
+    <string name="TelaInicioBoas">Bem vindo a Coffe House</string>
+
+
+
+
+
+
+    <string name="TelaEditBoasVindas">Altere seu Cafe</string>
+    <string name="TelaEditNomeCafe">Nome do Cafe</string>
+    <string name="TelaEditDescricao">Descricao do Cafe</string>
+    <string name="TelaEditValor">Valor do Cafe</string>
+    <string name="TelaEditSalvar">Salvar</string>
+
+
+    <string name="Excluir">Excluir</string>
+    <string name="Editar">Editar</string>
+    <string name="Compartilhar">Compartilhar</string>
+
+
+
+    <string name="EmailText">Compartilhe seu Cafe</string>
+    <string name="EmailEnvio">Email de destino</string>
+    <string name="EmailBTN">Enviar</string>
+
+
+
+
+
+
+
+
+
+
+</resources>
