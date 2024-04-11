@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="br.edu.ifrs.projetocafe.view.EditCafeActivity">
+    tools:context="br.edu.ifrs.projetocafe.view.EditCafeActivity"
+    android:background="@color/marromMedioClaro">
 
     <TextView
         android:id="@+id/textView"
@@ -123,13 +124,15 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/TelaEditSalvar"
+        android:background="@drawable/botaoradius"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.446"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextValor"
         app:layout_constraintVertical_bias="0.149"
-        style="@style/botaoColorido"/>
+       />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

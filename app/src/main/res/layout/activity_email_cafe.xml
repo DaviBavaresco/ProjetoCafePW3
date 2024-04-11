@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="br.edu.ifrs.projetocafe.view.EmailCafeActivity">
+    tools:context="br.edu.ifrs.projetocafe.view.EmailCafeActivity"
+    android:background="@color/marromMedioClaro">
 
     <TextView
         android:id="@+id/textView"
@@ -144,6 +145,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/EmailBTN"
+        android:background="@drawable/botaoradius"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
