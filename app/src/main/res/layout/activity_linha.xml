@@ -1,159 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/marromMedioClaro" >
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Nome"
-            android:id="@+id/textViewCodigo" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text=" - "
-            android:id="@+id/textViewTracoCodigo" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Nome"
-            android:id="@+id/textViewNome" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    android:background="@color/marromMedioClaro">
 
     <!-- Descricao -->
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat2"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewNome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Descricao" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text=" - " />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Descricao"
-            android:id="@+id/textViewDescricao" />
-
+            android:text="@string/TelaLinhaNome"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 
-    <!-- Valor -->
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Valor" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text=" : " />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text=" R$" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Valor"
-            android:id="@+id/textViewValor" />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
     <!-- Botoes -->
 
-    <RelativeLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat4"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="34dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2">
 
-        <androidx.appcompat.widget.AppCompatButton
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDescricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TelaLinhaDescri"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <!-- Valor -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat3"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat4">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TelaLinhaCifra"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewValor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TelaLinhaValor"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="126dp"
+        android:layout_height="72dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/buttonCompartilhar"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="117dp"
-            android:layout_height="match_parent"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="2dp"
+            android:layout_gravity="center|center_vertical"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="4dp"
             android:layout_marginRight="2dp"
             android:background="@drawable/botaoradius"
-            android:text="@string/Compartilhar"
-            android:textColor="#FFFFFF" />
+            app:srcCompat="@drawable/share_24" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/buttonExcluir"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="68dp"
-            android:layout_height="match_parent"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
             android:layout_alignBottom="@+id/buttonEditar"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="40dp"
+            android:layout_gravity="center|center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_marginRight="40dp"
             android:layout_marginBottom="-1dp"
-            android:layout_toStartOf="@+id/buttonEditar"
-            android:layout_toLeftOf="@+id/buttonEditar"
             android:background="@drawable/botaoradius"
-            android:text="@string/Excluir"
-            android:textColor="#FFFFFF" />
+            app:srcCompat="@drawable/delete_24" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/buttonEditar"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="63dp"
-            android:layout_height="34dp"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="-1dp"
-            android:layout_marginEnd="135dp"
+            android:layout_gravity="center|center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_marginRight="135dp"
             android:background="@drawable/botaoradius"
-            android:text="@string/Editar"
-            android:textColor="#FFFFFF" />
+            app:srcCompat="@drawable/edit_24" />
 
 
-    </RelativeLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

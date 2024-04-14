@@ -40,14 +40,14 @@ public class EditCafeActivity extends AppCompatActivity {
 
 
 
-        //cria evento para o botão editar
+
         botaoEdit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 alterarCafe();
             }
         });
-        //Pega o objeto que foi passado como parâmetro
+
         Bundle extra =  this.getIntent().getExtras();
         cafe = (Cafe) getIntent().getSerializableExtra("cafe");
         editTextNome.setText(cafe.getNome());
@@ -78,14 +78,12 @@ public class EditCafeActivity extends AppCompatActivity {
     public void exibeMensagem(){
 
         String msg = "Cafe alterado com sucesso! ";
-        //mostrando caixa de diálogo de sucesso
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle(R.string.app_name);
         alertDialog.setMessage(msg);
         alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
-                // Forçando que o código retorne para a tela de consulta
                 Intent intent = new Intent(getApplicationContext(), ListCafesActivity.class);
                 startActivity(intent);
                 finish();

@@ -8,6 +8,13 @@
 
 
     <string name="TelaInicioBoas">Bem vindo a Coffe House</string>
+    <string name="TelaInicioInserir">Adicionar</string>
+    <string name="TelaInicioListar">Listar</string>
+
+    <string name="TelaLinhaNome">  Nome</string>
+    <string name="TelaLinhaDescri">  Descricao</string>
+    <string name="TelaLinhaValor">  Valor</string>
+    <string name="TelaLinhaCifra">     R$</string>
 
 
 
@@ -15,9 +22,9 @@
 
 
     <string name="TelaEditBoasVindas">Altere seu Cafe</string>
-    <string name="TelaEditNomeCafe">Nome do Cafe</string>
-    <string name="TelaEditDescricao">Descricao do Cafe</string>
-    <string name="TelaEditValor">Valor do Cafe</string>
+    <string name="TelaEditNomeCafe">Nome do Cafe:</string>
+    <string name="TelaEditDescricao">Descricao do Cafe:</string>
+    <string name="TelaEditValor">Valor do Cafe:</string>
     <string name="TelaEditSalvar">Salvar</string>
 
 

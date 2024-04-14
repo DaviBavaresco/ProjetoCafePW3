@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatTextView;
 
 import br.edu.ifrs.projetocafe.R;
 import br.edu.ifrs.projetocafe.dao.AppDatabase;
@@ -16,9 +17,9 @@ import br.edu.ifrs.projetocafe.entity.Cafe;
 
 public class EmailCafeActivity extends AppCompatActivity {
 
-    AppCompatEditText emailTextNome ;
-    AppCompatEditText emailTextDesc;
-    AppCompatEditText emailTextValor;
+    AppCompatTextView emailTextNome ;
+    AppCompatTextView emailTextDesc;
+    AppCompatTextView emailTextValor;
     AppCompatEditText emailTextEmail;
     AppCompatButton botaoEnvio;
 
@@ -34,10 +35,6 @@ public class EmailCafeActivity extends AppCompatActivity {
         emailTextEmail =  this.findViewById(R.id.emailTextEmail);
         botaoEnvio =  this.findViewById(R.id.buttonEnvio);
 
-
-
-
-        //cria evento para o botão editar
         botaoEnvio.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -50,8 +47,7 @@ public class EmailCafeActivity extends AppCompatActivity {
                 sendEmail(Nome,Descri,Valor,Para);
             }
         });
-        //Pega o objeto que foi passado como parâmetro
-        Bundle extra =  this.getIntent().getExtras();
+
         cafe = (Cafe) getIntent().getSerializableExtra("cafe");
         emailTextNome.setText(cafe.getNome());
         emailTextDesc.setText(cafe.getDescricao());
@@ -62,8 +58,7 @@ public class EmailCafeActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.putExtra(Intent.EXTRA_EMAIL, new String[]{Para});
         intent.putExtra(Intent.EXTRA_SUBJECT,"Quero compartilhar com voce meu cafe favorito");
-        intent.putExtra(Intent.EXTRA_TEXT, "Nome: "+ Nome+" Descrição: "+Descri+" Valor: " + Valor);
-        //intent.putExtra(Intent.EXTRA_TEXT, Valor);
+        intent.putExtra(Intent.EXTRA_TEXT, "Nome: "+ Nome+", Descrição: "+Descri+", Valor: " + Valor);
         intent.setType("message/rfc822");
         startActivity(Intent.createChooser(intent,"Choose email client:"));
 

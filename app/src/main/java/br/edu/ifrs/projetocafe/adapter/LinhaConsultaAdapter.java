@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.appcompat.widget.AppCompatTextView;
 
 import java.util.ArrayList;
@@ -24,15 +25,13 @@ import br.edu.ifrs.projetocafe.view.ListCafesActivity;
 
 public class LinhaConsultaAdapter extends BaseAdapter {
 
-
-    //Cria objeto LayoutInflater para ligar com a View activity_linha.xml
     private static LayoutInflater layoutInflater = null;
     List<Cafe> cafes =  new ArrayList<>();
 
-    //Cria objeto do tipo que lista as tarefas
+
     private ListCafesActivity listarAtividades;
 
-    //Construtor que recebe a ativida como parametro e a lista de tarefas que vai retornar do BD
+
     public LinhaConsultaAdapter(ListCafesActivity listarAtividades, List<Cafe> cafes ) {
         this.cafes       =  cafes;
         this.listarAtividades  =  listarAtividades;
@@ -58,24 +57,21 @@ public class LinhaConsultaAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        //Cria um objeto para acessar o layout activity_linha.xml
+
         final View viewLinhaLista = layoutInflater.inflate(R.layout.activity_linha,null);
 
-        //vincula os campos do arquivo de layout aos objetos cadastrados
-        AppCompatTextView textViewCodigo = viewLinhaLista.findViewById(R.id.textViewCodigo);
         AppCompatTextView textViewNome  =  viewLinhaLista.findViewById(R.id.textViewNome);
         AppCompatTextView textViewDescricao = viewLinhaLista.findViewById(R.id.textViewDescricao);
         AppCompatTextView textViewValor = viewLinhaLista.findViewById(R.id.textViewValor);
-        AppCompatButton buttonCompartilhar = viewLinhaLista.findViewById(R.id.buttonCompartilhar);
-        AppCompatButton buttonExcluir = viewLinhaLista.findViewById(R.id.buttonExcluir);
-        AppCompatButton buttonEditar = viewLinhaLista.findViewById(R.id.buttonEditar);
+        AppCompatImageButton buttonCompartilhar = viewLinhaLista.findViewById(R.id.buttonCompartilhar);
+        AppCompatImageButton buttonExcluir = viewLinhaLista.findViewById(R.id.buttonExcluir);
+        AppCompatImageButton buttonEditar = viewLinhaLista.findViewById(R.id.buttonEditar);
 
-        textViewCodigo.setText(String.valueOf(cafes.get(position).getId()));
         textViewNome.setText(cafes.get(position).getNome());
         textViewDescricao.setText(cafes.get(position).getDescricao());
         textViewValor.setText(cafes.get(position).getValor());
 
-        //Criando evento para excluir um registro do BD
+
         buttonExcluir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +82,7 @@ public class LinhaConsultaAdapter extends BaseAdapter {
             }
         });
 
-        //Criando evento para editar um registro do BD
+
         buttonEditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,17 +108,12 @@ public class LinhaConsultaAdapter extends BaseAdapter {
 
     }
 
-    //atualizando a lista após excluir registro
+
     public void atualizaLista(int position){
-        String mensagem = "Registro excluído com sucesso!";
+        String mensagem = "Café excluído com sucesso!";
         Toast.makeText(listarAtividades, mensagem, Toast.LENGTH_LONG).show();
         this.cafes.remove(position);
         this.notifyDataSetChanged();
     }
 
-
-        public void enviaEmail(View v) {
-            Intent intent = new Intent(Intent.ACTION_SEND);
-
-        }
 }

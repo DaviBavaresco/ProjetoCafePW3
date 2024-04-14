@@ -1,5 +1,6 @@
 package br.edu.ifrs.projetocafe.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +36,8 @@ public class CadCafeActivity extends AppCompatActivity {
                 AppDatabase.getInstance(getApplicationContext()).createCafeDAO().insert(cafe);
                 Toast.makeText(getApplicationContext(), "Seu Cafe foi salvo com sucesso!", Toast.LENGTH_LONG).show();
                 limparCampos();
+                Intent intent = new Intent(CadCafeActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -47,5 +50,7 @@ public class CadCafeActivity extends AppCompatActivity {
         nome.setText("");
         descricao.setText("");
         valor.setText("");
+
     }
+
 }
